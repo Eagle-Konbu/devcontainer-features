@@ -1,0 +1,17 @@
+{
+    "id": "goreg",
+    "name": "goreg - Go Import Formatter",
+    "version": "1.0.0",
+    "description": "Installs goreg, a Go import formatting tool that organizes imports into distinct groups",
+    "documentationURL": "https://github.com/magicdrive/goreg",
+    "options": {
+        "version": {
+            "type": "string",
+            "default": "latest",
+            "description": "Version of goreg to install. Use 'latest' for the most recent version, or specify a version like '1.2.10'"
+        }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/go"
+    ]
+}

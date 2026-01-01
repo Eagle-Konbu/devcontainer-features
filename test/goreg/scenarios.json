@@ -1,0 +1,18 @@
+{
+    "version_latest": {
+        "image": "mcr.microsoft.com/devcontainers/go:1",
+        "features": {
+            "goreg": {
+                "version": "latest"
+            }
+        }
+    },
+    "version_specific": {
+        "image": "mcr.microsoft.com/devcontainers/go:1",
+        "features": {
+            "goreg": {
+                "version": "1.2.10"
+            }
+        }
+    }
+}
