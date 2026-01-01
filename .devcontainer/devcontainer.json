@@ -13,12 +13,20 @@
                 ]
             },
             "extensions": [
-                "mads-hartmann.bash-ide-vscode"
+                "mads-hartmann.bash-ide-vscode",
+                "eamodio.gitlens",
+                "streetsidesoftware.code-spell-checker",
+                "Anthropic.claude-code"
             ]
         }
     },
     "features": {
-        "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+        "ghcr.io/devcontainers/features/docker-in-docker:2": {},
+        "ghcr.io/devcontainers/features/common-utils:2": {
+            "installZsh": true,
+            "configureZshAsDefaultShell": true,
+            "installOhMyZsh": true
+        }
     },
     "remoteUser": "node",
     "updateContentCommand": "npm install -g @devcontainers/cli"
