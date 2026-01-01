@@ -18,8 +18,18 @@
         }
     },
     "features": {
-        "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+        "ghcr.io/devcontainers/features/docker-in-docker:2": {},
+        "ghcr.io/devcontainers/features/git:1": {
+            "version": "latest"
+        }
+    },
+    "mounts": [
+        "source=${localEnv:HOME}${localEnv:USERPROFILE}/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock,target=/tmp/1password-agent.sock,type=bind"
+    ],
+    "remoteEnv": {
+        "SSH_AUTH_SOCK": "/tmp/1password-agent.sock"
     },
     "remoteUser": "node",
-    "updateContentCommand": "npm install -g @devcontainers/cli"
+    "updateContentCommand": "npm install -g @devcontainers/cli",
+    "postCreateCommand": "git config --global gpg.format ssh && git config --global commit.gpgsign true"
 }
