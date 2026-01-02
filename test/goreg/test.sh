@@ -15,6 +15,10 @@ set -e
 # Provides the 'check' and 'reportResults' commands.
 source dev-container-features-test-lib
 
+# Prerequisite: goreg requires Go to be installed
+# The Go feature should be installed via 'installsAfter' dependency
+check "go is installed (prerequisite)" command -v go
+
 # Smoke tests: Verify basic installation and command availability
 # The 'check' command comes from the dev-container-features-test-lib.
 
