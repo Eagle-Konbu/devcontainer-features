@@ -1,0 +1,10 @@
+{
+    "goreg_integration": {
+        "image": "mcr.microsoft.com/devcontainers/go:1",
+        "features": {
+            "goreg": {
+                "version": "latest"
+            }
+        }
+    }
+}
