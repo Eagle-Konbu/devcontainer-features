@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Test goreg installation with specific version (1.2.10)
-# This scenario verifies that a specific version can be installed
+# Test goreg installation with default options (no version specified)
+# This scenario tests that the feature works when no options are provided
 
 set -e
 
