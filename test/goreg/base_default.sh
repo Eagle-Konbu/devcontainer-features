@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Test goreg installation with specific version (1.2.10)
-# This scenario verifies that a specific version can be installed
+# Test goreg installation on base image with Go installed via feature
+# This scenario tests that the feature works when Go is installed via devcontainer feature
 
 set -e
 

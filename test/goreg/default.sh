@@ -7,30 +7,13 @@ set -e
 
 source dev-container-features-test-lib
 
-# Basic installation checks
-check "goreg is installed" command -v goreg
-check "goreg can execute" goreg --help
+# Source common test functions
+source "$(dirname "$0")/common_tests.sh"
 
-# Functional test with default installation
-cat > /tmp/test_default.go << 'EOF'
-package main
+# Run common installation tests
+common_installation_tests
 
-import (
-	"fmt"
-	"time"
-	"os"
-)
-
-func main() {
-	fmt.Println(time.Now())
-	os.Exit(0)
-}
-EOF
-
-# Run goreg to ensure default installation works
-check "goreg can format with default options" goreg -w /tmp/test_default.go
-
-# Clean up
-rm -f /tmp/test_default.go
+# Run common functional tests
+common_functional_test
 
 reportResults
